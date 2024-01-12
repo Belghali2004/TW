@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="site.css">
+</head>
+<body class="background-container">
+
+    <div class="clock-container">
+        <div id="clock"></div>
+    </div>
+    
+    <div class="login-container">
+        <h2>Login</h2>
+        
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        
+            <div class="remember-me">
+                <label for="rememberMe">Remember me</label>
+                <input type="checkbox" id="rememberMe" name="rememberMe">
+            </div>
+        
+            <button type="button" onclick="submitForm()">Login</button>
+        </form>
+    </div>
+
+    <div class="calculator-container" style="display: none;">
+            <div id="history"></div>
+            <input type="text" id="display" readonly>
+            <div class="calculator-buttons">
+                <button onclick="appendToInput('7')">7</button>
+                <button onclick="appendToInput('8')">8</button>
+                <button onclick="appendToInput('9')">9</button>
+                <button onclick="setOperator('+')">+</button>
+    
+                <button onclick="appendToInput('4')">4</button>
+                <button onclick="appendToInput('5')">5</button>
+                <button onclick="appendToInput('6')">6</button>
+                <button onclick="setOperator('-')">-</button>
+    
+                <button onclick="appendToInput('1')">1</button>
+                <button onclick="appendToInput('2')">2</button>
+                <button onclick="appendToInput('3')">3</button>
+                <button onclick="setOperator('*')">*</button>
+    
+                <button onclick="appendToInput('0')">0</button>
+                <button onclick="appendToInput('.')">.</button>
+                <button onclick="calculateResult()">=</button>
+                <button onclick="setOperator('/')">/</button>
+    
+                <button onclick="performOperation('sqrt')">√</button>
+                <button onclick="performOperation('square')">x²</button>
+                <button onclick="appendToInput('(')">(</button>
+                <button onclick="appendToInput(')')">)</button>
+            </div>
+            <button class="clear-btn" onclick="clearCalculator()">C</button>
+        </div>
+    
+
+   
+
+    <script src="site.js"></script>
+</body>
+</html>
